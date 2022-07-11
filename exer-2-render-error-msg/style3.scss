@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+$bg: rgb(255, 69, 0);
+$bg-m: rgb(253, 107, 54);
+$duration: 0.6s;
+
+body {
+  @include center;
+  min-height: 100vh;
+}
+
+.frame {
+  position: relative;
+  @include center;
+  flex-direction: column;
+  height: 40rem;
+  width: 40rem;
+  background: linear-gradient(45deg, rgb(121, 235, 243), rgb(248, 184, 245));
+  overflow: hidden;
+}
+
+img{
+    position: absolute;
+    width: 20rem;
+    display: block;
+    top: 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem #000;
+}
+
+p{
+    position: absolute;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    top: 18rem;
+    padding: 1rem 0;
+}
+
+button{
+    position: absolute;
+    background: transparent;
+    color: #000;
+    margin-top: 1rem;
+    padding: 1rem 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: .1rem solid rgb(250, 128, 114);
+    border-radius: 2rem;
+    top: 25rem;
+    box-shadow: 0 0 .5rem #000;
+    transition: .3s ease-in-out;
+
+    &:active{
+        background-color: rgb(250, 128, 114);
+        color: #fff;
+        transform: scale(.98);
+    }
+}
+
+#error{
+    position: absolute;
+    color: red;
+    font-weight: 100;
+    font-size: 1.5rem;
+    top: 32rem;
+}
