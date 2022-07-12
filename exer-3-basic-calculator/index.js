@@ -21,5 +21,5 @@ document.querySelector('.multiply').addEventListener("click", () => {
 
 document.querySelector('.divide').addEventListener("click", () => {
     result = num1.value / num2.value;
-    answer.textContent = "Answer is " + result;
+    answer.textContent = "Answer is " + result.toFixed(2);
 })
