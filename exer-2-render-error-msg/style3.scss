@@ -18,11 +18,6 @@
   align-items: center;
 }
 
-
-$bg: rgb(255, 69, 0);
-$bg-m: rgb(253, 107, 54);
-$duration: 0.6s;
-
 body {
   @include center;
   min-height: 100vh;

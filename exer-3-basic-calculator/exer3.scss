@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  @include center;
+  min-height: 100vh;
+}
+
+.frame {
+  position: relative;
+  @include center;
+  flex-direction: column;
+  height: 40rem;
+  width: 40rem;
+  background: linear-gradient(45deg, rgb(121, 235, 243), rgb(248, 184, 245));
+  overflow: hidden;
+}
+#numbers {
+  position: absolute;
+  @include center;
+  gap: 3rem;
+  height: 3rem;
+  width: 3rem;
+  top: 4rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#num1-el,
+#num2-el {
+  width: 5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border: none;
+  text-align: center;
+  border-radius: .5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+#operator-btns {
+  position: absolute;
+  @include center;
+  flex-direction: column;
+  top: 10rem;
+  width: 15rem;
+}
+
+button {
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #000;
+  margin: 1rem;
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.5);
+
+  &:active{
+    transform: scale(.97);
+  }
+}
+
+#result-el {
+  position: absolute;
+  top: 35rem;
+  font-size: 2rem;
+  color: rgb(1, 92, 99);
+}
