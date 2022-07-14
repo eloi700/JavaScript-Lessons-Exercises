@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  font-family: 'Caesar Dressing', cursive;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  @include center;
+  min-height: 100vh;
+}
+
+.frame {
+  position: relative;
+  @include center;
+  flex-direction: column;
+  height: 40rem;
+  width: 40rem;
+  background: #000;
+  overflow: hidden;
+}
+
+.title{
+    position: absolute;
+    top: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    transform: rotate(-3deg);
+    color: rgb(255, 165, 0);
+    padding: 1rem 4rem;
+    border: .1rem dashed #fff;
+    text-shadow: 0 0 .5rem rgba(255, 255, 255, 0.5);
+}
+
+#fightButton{
+    position: absolute;
+    color: rgb(255, 165, 0);
+    font-family: 'Caesar Dressing', cursive;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: .5rem;
+    letter-spacing: .1rem;
+    top: 33rem;
+
+    &:active{
+        transform: scale(.97);
+        box-shadow: 0 0 .5rem #fff;
+    }
+}
+
+#stage{
+    position: absolute;
+    font-size: 8rem;
+    color:rgb(255, 165, 0);
+}
