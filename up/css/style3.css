@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.frame {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 40rem;
+  width: 40rem;
+  background: linear-gradient(45deg, #79ebf3, #f8b8f5);
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+  width: 20rem;
+  display: block;
+  top: 3rem;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0 .5rem #000;
+          box-shadow: 0 0 .5rem #000;
+}
+
+p {
+  position: absolute;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  top: 18rem;
+  padding: 1rem 0;
+}
+
+button {
+  position: absolute;
+  background: transparent;
+  color: #000;
+  margin-top: 1rem;
+  padding: 1rem 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0.1rem solid salmon;
+  border-radius: 2rem;
+  top: 25rem;
+  -webkit-box-shadow: 0 0 .5rem #000;
+          box-shadow: 0 0 .5rem #000;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+button:active {
+  background-color: salmon;
+  color: #fff;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+#error {
+  position: absolute;
+  color: red;
+  font-weight: 100;
+  font-size: 1.5rem;
+  top: 32rem;
+}
+/*# sourceMappingURL=style3.css.map */
