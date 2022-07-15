@@ -1,5 +1,8 @@
 const fighters = [ "🐒", "🦍", "🦧", "🐕", "🐩","🐺","🦊","🐈","🦁","🐅","🐆","🐄","🐖","🐏","🐐","🐘","🐊","🐍" ];
 
+// For character set in html - generating characters
+// String.fromCharCode() method - http://www.net-comber.com/charset.html
+
 const stageEl = document.getElementById('stage');
 const fightButton = document.getElementById('fightButton');
 let animalFighters = []
