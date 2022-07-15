@@ -80,7 +80,7 @@ function passenger() {
     return discount.senior;
   }
 }
-// console.log(passenger());
+// passenger();
 document.querySelector(".passenger-discount").textContent = passenger();
 
 // LOOP (FOR) & ARRAYS
@@ -146,6 +146,35 @@ function studentApplicant(randomName){
 }
 document.querySelector(".random-name").textContent = studentApplicant(randomName);
 
+// FOR EACH LOOP - PUSH IN EMPTY ARRAY - ODD & EVEN
+const fighters = [ "🐒", "🦍", "🦧", "🐕", "🐩","🐺","🦊","🐈","🦁","🐅","🐆","🐄","🐖","🐏","🐐","🐘","🐊","🐍" ];
+const evenFighter = [];
+const oddFighter = [];
+
+fighters.forEach((fighter, index) =>{
+  if(index % 2 === 0){
+    evenFighter.push(fighter)
+  } else {
+    oddFighter.push(fighter);
+  }
+})
+console.log(evenFighter);
+console.log(oddFighter);
 
 
+const items = ['item1', 'item2', 'item3'];
+const copyItems1 = [];
+const copyItems2 = [];
+
+// FOR LOOP
+for (let i = 0; i < items.length; i++) {
+  copyItems1.push(items[i])
+}
+console.log(copyItems1)
+
+// FOR EACH LOOP
+items.forEach((item) => {
+  copyItems2.push(item)
+});
+console.log(copyItems2);
 

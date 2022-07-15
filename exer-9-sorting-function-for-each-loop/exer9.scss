@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  font-family: 'Caesar Dressing', cursive;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  @include center;
+  min-height: 100vh;
+}
+
+.frame {
+  position: relative;
+  @include center;
+  flex-direction: column;
+  height: 40rem;
+  width: 40rem;
+  background: rgb(244, 164, 96);
+  overflow: hidden;
+}
+
+#grape-shelf, #apple-shelf, #women-shelf, #men-shelf{
+    padding: 1rem 0;
+    border-radius: 1rem;
+    width: 20rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+    letter-spacing: .5rem;
+    text-align: center;
+    box-shadow: 0 0 .5rem #000;
+}
