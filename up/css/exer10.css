@@ -43,7 +43,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 35rem;
-  width: 28rem;
+  width: 30rem;
   background: #027878;
   overflow: hidden;
   color: #fff;
@@ -62,7 +62,7 @@ body {
   position: absolute;
   background: #fdb632;
   width: calc(100% + 4px);
-  height: 90%;
+  height: 25%;
   left: -2px;
   bottom: 0;
   z-index: -1;
@@ -98,12 +98,12 @@ body {
           align-items: flex-start;
   top: 3rem;
   height: 28rem;
-  width: 25rem;
+  width: 28rem;
 }
 
 .chars-include {
   position: absolute;
-  top: 7.5rem;
+  top: 7rem;
   font-size: 1.4rem;
   text-align: center;
 }
@@ -124,13 +124,13 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 1.4rem;
-  margin: 1rem 1.5rem;
-  top: 0;
+  margin: .5rem 1.5rem;
+  top: -1.5rem;
 }
 
 .key-option-length {
   left: 2rem;
-  top: -1rem;
+  top: -1.5rem;
 }
 
 .input-length {
@@ -229,28 +229,29 @@ input[type="checkbox"]:checked + .option::after {
   font-size: 1.5rem;
   letter-spacing: .1rem;
   padding: 1rem;
-  height: 4rem;
+  height: 3.5rem;
   border-radius: 0.5rem;
-  width: 100%;
+  width: 90%;
+  left: 1.4rem;
   bottom: 1.3rem;
   background: #fdb632;
 }
 
 #result {
-  word-wrap: break-word;
+  overflow: hidden;
   max-width: calc(100% - 3rem);
 }
 
 .copy-btn {
   position: absolute;
-  left: 22rem;
+  left: 21rem;
   font-size: 2rem;
   background: none;
-  border: none;
+  border-radius: 50%;
+  padding: .3rem .8rem;
+  border: .1rem solid #fff;
   color: #777;
   cursor: pointer;
-  -webkit-transition: 0.5s active ease-in-out;
-  transition: 0.5s active ease-in-out;
 }
 
 .copy-btn:active {
@@ -269,7 +270,7 @@ input[type="checkbox"]:checked + .option::after {
   background: none;
   font-family: inherit;
   color: #fff;
-  left: 4.5rem;
+  left: 7rem;
   border: 0.1rem solid #fdb632;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -296,10 +297,58 @@ input[type="checkbox"]:checked + .option::after {
   position: absolute;
   font-size: 1.2rem;
   color: #027878;
-  top: 5rem;
+  top: -2.5rem;
   right: 0;
   background: #fdb632;
-  padding: 0.5rem;
+  padding: .3rem;
   visibility: hidden;
+}
+
+.pass-checker-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  left: 1.4rem;
+  height: 2rem;
+  width: 90%;
+  top: -.5rem;
+}
+
+.checker-title, .strength-badge {
+  font-size: 1.4rem;
+}
+
+.strength-badge {
+  width: 12rem;
+  height: 2rem;
+  text-align: center;
+  margin-left: 1.8rem;
+  padding: 0;
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
+.strength-badge.strong {
+  background-color: #00ff00;
+  color: #777;
+}
+
+.strength-badge.medium {
+  background-color: #0000ff;
+}
+
+.strength-badge.weak {
+  background-color: #ff0000;
 }
 /*# sourceMappingURL=exer10.css.map */
