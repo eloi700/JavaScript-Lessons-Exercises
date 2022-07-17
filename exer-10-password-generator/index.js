@@ -62,7 +62,6 @@ generateEl.addEventListener("click", () => {
     hasUpper,
     length
   );
-
   strengthBadge.style.visibility = "visible";
   clearTimeout(timeout);
 });
