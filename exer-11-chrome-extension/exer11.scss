@@ -1,4 +1,8 @@
 body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 0;
     padding: 10px;
     box-sizing: border-box;
@@ -26,6 +30,11 @@ body{
     background: none;
     color: #5f9341;
     // cursor: pointer;
+}
+
+#tab-btn{
+    @extend #save-btn;
+    padding: 12px 27px;
 }
 
 ul{

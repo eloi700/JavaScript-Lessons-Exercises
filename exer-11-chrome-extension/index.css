@@ -1,32 +1,54 @@
 body {
-    margin: 0;
-    padding: 10px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    min-width: 280px;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 280px;
+}
 
-  #input-el {
-    padding: 12px 50px;
-    border: .1rem solid #5f9341;
-    width: calc(100% - 100px);
-  }
+#input-el {
+  padding: 12px 20px;
+  border: .1rem solid #5f9341;
+  width: calc(100% - 40px);
+}
 
-  #input-btn {
-    background: #5f9341;
-    padding: 12px 50px;
-    border: none;
-    color: #fff;
-    margin-top: 12px;
-    font-weight: bold;
-  }
+#save-btn, #delete-btn, #tab-btn {
+  background: #5f9341;
+  padding: 10px 20px;
+  border: .1rem solid #5f9341;
+  color: #fff;
+  margin-top: 12px;
+  font-weight: bold;
+}
 
-  ul {
-    padding: 0;
-    list-style: none;
-  }
+#delete-btn {
+  background: none;
+  color: #5f9341;
+}
 
-  a {
-    color: #5f9341;
-  }
+#tab-btn {
+  padding: 12px 27px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #5f9341;
+}
