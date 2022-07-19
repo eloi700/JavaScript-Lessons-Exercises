@@ -23,6 +23,7 @@ tabBtn.addEventListener("click", () => {
     },
     (tabs) => {
       myLeads.push(tabs[0].url);
+      console.log(myLeads)
       localStorage.setItem("myLeads", JSON.stringify(myLeads));
       render(myLeads);
     }
@@ -33,7 +34,7 @@ function render(leads) {
   let listItems = ""; // create a list items
   for (let i = 0; i < leads.length; i++) {
     //add the link in new tab
-    listItems += `<a href="#" target="_blank"><li> ${leads[i]}</li></a>`;
+    listItems += `<a href="${leads[i]}" target="_blank"><li> ${leads[i]}</li></a>`;
   }
   ulEl.innerHTML = listItems;
 }
