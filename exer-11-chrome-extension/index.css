@@ -8,14 +8,14 @@ body {
   }
 
   #input-el {
-    padding: 12px 10px;
+    padding: 12px 50px;
     border: .1rem solid #5f9341;
-    width: calc(100% - 20px);
+    width: calc(100% - 100px);
   }
 
   #input-btn {
     background: #5f9341;
-    padding: 12px 30px;
+    padding: 12px 50px;
     border: none;
     color: #fff;
     margin-top: 12px;
@@ -30,4 +30,3 @@ body {
   a {
     color: #5f9341;
   }
-  /*# sourceMappingURL=exer11.css.map */

@@ -7,18 +7,25 @@ body{
 }
 
 #input-el{
-    padding: 12px 10px;
+    padding: 12px 20px;
     border: .1rem solid #5f9341;
-    width: calc(100% - 20px); // less the padding (left & right)
+    width: calc(100% - 40px); // less the padding (left & right)
 }
 
-#input-btn{
+#save-btn{
     background: #5f9341;
-    padding: 12px 30px;
-    border: none;
+    padding: 10px 20px;
+    border: .1rem solid #5f9341;
     color: #fff;
     margin-top: 12px;
     font-weight: bold;
+}
+
+#delete-btn{
+    @extend #save-btn;
+    background: none;
+    color: #5f9341;
+    // cursor: pointer;
 }
 
 ul{
