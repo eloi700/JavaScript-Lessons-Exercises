@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  @include center;
+  min-height: 100vh;
+}
+
+.frame {
+  position: relative;
+  @include center;
+  flex-direction: column;
+  height: 40rem;
+  width: 40rem;
+  background: #ffa500;
+  overflow: hidden;
+}
+
+.title1{
+    position: absolute;
+    top: 3rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.title2{
+    @extend .title1;
+    top: 20rem;
+}
+
+#img-container{
+    position: absolute;
+    @include center;
+    width: 100%;
+    gap: 2rem;
+    top: 8rem;
+}
+
+.team-img{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+}
+
+.nature-pic{
+    @extend .team-img;
+    border-radius: 1rem;
+}
+
+#nature-container{
+    position: absolute;
+    @include center;
+    top: 25rem;
+    gap: 2rem;
+}
+
