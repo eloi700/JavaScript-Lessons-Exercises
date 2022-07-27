@@ -124,8 +124,5 @@ valAttr = link[3].hasAttribute('class'); //true
 valAttr = link[1].setAttribute('title', 'Google Link')
 link[1].removeAttribute('title');
 
-
-
-
 console.log(valAttr);
 
