@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/up/css/exer28.css" />
+    <title>Events Bubbling & Delegation</title>
+  </head>
+  <body>
+    <div class="frame">
+      <form action="" class="form-1">
+        <h1 class="form-title">FORM</h1>
+        <h5 class="title">Mouse Move X & Y</h5>
+        <input type="text" id="task" class="task" value="Walk the dog" />
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+
+      <ul class="parent-items">
+        <li>
+          Item-1
+          <a href="#" class="delete-item test-item1"
+            ><i class="fa fa-times-circle"></i
+          ></a>
+        </li>
+        <li>
+          Item-2
+          <a href="#" class="delete-item test-item2"
+            ><i class="fa fa-times-circle"></i
+          ></a>
+        </li>
+        <li>
+          Item-3
+          <a href="#" class="delete-item test-item3"
+            ><i class="fa fa-times-circle"></i
+          ></a>
+        </li>
+        <li>
+          Item-4
+          <a href="#" class="delete-item test-item4"
+            ><i class="fa fa-times-circle"></i
+          ></a>
+        </li>
+        <li>
+          Item-5
+          <a href="#" class="delete-item test-item5 test-only"
+            ><i class="fa fa-times-circle"></i
+          ></a>
+        </li>
+        <br /><br /><br />
+        <div class="container">
+          <button class="del-btn clear-btn">Delete Task</button>
+        </div>
+      </ul>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/7d534dd6bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

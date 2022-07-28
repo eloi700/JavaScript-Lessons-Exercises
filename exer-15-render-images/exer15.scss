@@ -1,36 +1,4 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-:root {
-  font-size: 10px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body {
-  @include center;
-  min-height: 100vh;
-}
-
-.frame {
-  position: relative;
-  @include center;
-  flex-direction: column;
-  height: 40rem;
-  width: 40rem;
-  background: #ffa500;
-  overflow: hidden;
-}
 
 .title1{
     position: absolute;

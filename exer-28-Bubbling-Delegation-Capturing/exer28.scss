@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    @include center;
+    min-height: 100vh;
+}
+
+.frame{
+    position: relative;
+    @include center;
+    height: 50rem;
+    width: 35rem;
+    border: .2rem solid #000;
+}
+
+.form-1{
+    position: absolute;
+    top: 1rem;
+    height: 10rem;
+    width: 30rem;
+    margin-bottom: 3rem;
+}
+
+.form-title{
+    text-align: center;
+}
+
+.container{
+    position: relative;
+    height: 20rem;
+    width: 20rem;
+    top: -3rem;
+    border: .3rem solid #ff0000;
+}
+
+.clear-btn{
+    padding: 2rem 3rem;
+}
+
+.title{
+    font-size: 1.5rem;
+    color: #000;
+    padding: 2rem 0;
+}
+
+.submit-btn{
+    position: absolute;
+    padding: .5rem 2rem;
+    background: #00f;
+    color: #fff;
+    top: 13rem;
+    border: none;
+    cursor: pointer;
+}
+
+.parent-items{
+    position: absolute;
+    top: 15rem;
+    @include center;
+    flex-direction: column;
+}
+
+.task{
+    position: absolute;
+    width: 100%;
+    border-width: .2rem;
+    border-style: solid;
+    border-color: transparent transparent #000 transparent;
+    outline: none;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #000;
+}
+
