@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PWA LINKS -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Personal Shopping List." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Personal Shopping List" />
+    <meta name="apple-mobile-web-app-title" content="Shopping List" />
+    <meta name="msapplication-starturl" content="/home.html" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="icon.svg" />
+    <link rel="apple-touch-icon" href="icon192.png" />
+    <link rel="apple-touch-icon" href="icon512.png" />
+    <!-- <link rel="stylesheet" href="exer30.css" /> -->
+    <link rel="stylesheet" href="/up/css/exer30.css" />
+    <title>Shopping List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+        <h1 class="app-title">Personal Shopping List</h1>
+        <img src="./header.svg" alt="header image" />
+      </div>
+      <div id="main">
+        <form class="form">
+          <div class="btn-opt-wrapper">
+            <button class="add-btn">Add</button>
+            <button class="theme-opt">Theme</button>
+
+            <select id="select" name="choice">
+              <option class="opt opt-1">Crisp Dramatic</option>
+              <option class="opt opt-2">Watery Blue-Greens</option>
+              <option class="opt opt-3">Surf & Turf</option>
+              <option class="opt opt-4" selected>Standard</option>
+            </select>
+          </div>
+          <ul id="ul-items">
+            <li>
+              <input type="checkbox" id="cb-bought" checked />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Potato"
+              />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Sugar"
+              />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Rice"
+              />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input type="text" id="item-list" class="item-list" value="Oil" />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Eggs"
+              />
+            </li>
+
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Potato"
+              />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Sugar"
+              />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Rice"
+              />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input type="text" id="item-list" class="item-list" value="Oil" />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Eggs"
+              />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" checked />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Potato"
+              />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Sugar"
+              />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Rice"
+              />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input type="text" id="item-list" class="item-list" value="Oil" />
+            </li>
+            <li>
+              <input type="checkbox" id="cb-bought" />
+              <input
+                type="text"
+                id="item-list"
+                class="item-list"
+                value="Eggs"
+              />
+            </li>
+          </ul>
+          <button class="masterlist">Add to Masterlist</button>
+        </form>
+      </div>
+      <div id="footer">
+        <h6 class="copyright">All Rights Reserved. &copy;2022</h6>
+        <img src="./footer.svg" alt="footer image" />
+      </div>
+    </div>
+    <!-- <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((serviceWorker) => {
+              console.log("Service Worker registered: ", serviceWorker);
+            })
+            .catch((error) => {
+              console.error("Error registering the Service Worker: ", error);
+            });
+        }
+      </script> -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
