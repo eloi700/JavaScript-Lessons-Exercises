@@ -71,47 +71,7 @@
             </select>
             <button type="submit" class="add-btn">Add</button>
           </div>
-          <ul id="ul-items">
-            <!-- <li>
-              <input type="checkbox" id="cb-bought" checked />
-              <input
-                type="text"
-                id="item-list"
-                value="Potato"
-              />
-            </li>
-            <li>
-              <input type="checkbox" id="cb-bought" />
-              <input
-                type="text"
-                id="item-list"
-                class="item-list"
-                value="Sugar"
-              />
-            </li>
-            <li>
-              <input type="checkbox" id="cb-bought" />
-              <input
-                type="text"
-                id="item-list"
-                class="item-list"
-                value="Rice"
-              />
-            </li>
-            <li>
-              <input type="checkbox" id="cb-bought" />
-              <input type="text" id="item-list" class="item-list" value="Oil" />
-            </li>
-            <li>
-              <input type="checkbox" id="cb-bought" />
-              <input
-                type="text"
-                id="item-list"
-                class="item-list"
-                value="Eggs"
-              />
-            </li> -->
-          </ul>
+          <ul id="ul-items"></ul>
           <div class="bottom-btn">
             <button type="button" class="clear-items">Clear Items</button>
             <button type="button" class="masterlist">⊕ Masterlist</button>
@@ -146,18 +106,18 @@
         </svg>
       </div>
     </div>
-    <!-- <script>
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker
-            .register("/sw.js")
-            .then((serviceWorker) => {
-              console.log("Service Worker registered: ", serviceWorker);
-            })
-            .catch((error) => {
-              console.error("Error registering the Service Worker: ", error);
-            });
-        }
-      </script> -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then((serviceWorker) => {
+            console.log("Service Worker registered: ", serviceWorker);
+          })
+          .catch((error) => {
+            console.error("Error registering the Service Worker: ", error);
+          });
+      }
+    </script>
 
     <script src="app.js"></script>
   </body>

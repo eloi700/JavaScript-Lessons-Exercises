@@ -15,13 +15,14 @@ const themeStandard = document.querySelector(".theme-standard");
 
 //change themes
 select.addEventListener("change", () => {
-  document.body.classList.forEach((className) =>
-    document.body.classList.remove(className)
-  );
   changeTheme();
 });
 
 function changeTheme() {
+  document.body.classList.forEach((className) =>
+    document.body.classList.remove(className)
+  );
+
   if (select.value === "Crisp Dramatic") {
     document.body.classList.add("theme-crisp-dramatic");
   } else if (select.value === "Mint Chocolate") {
@@ -82,7 +83,6 @@ function saveToLocalStorage(itemList) {
 const retrieveItems = JSON.parse(localStorage.getItem("List_of_Items"));
 retrieveItems.forEach((itemInputValue) => {
   createListItem(itemInputValue);
-  changeTheme();
 });
 // })();
 
@@ -97,5 +97,6 @@ masterlist.addEventListener("click", () => {
 
 //load - get item - theme from local storage
 const theme = window.localStorage.getItem("Current_Theme") ?? "Theme";
+console.log('saved theme', theme);
 select.value = theme;
 changeTheme();
