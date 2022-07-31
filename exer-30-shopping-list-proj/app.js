@@ -18,7 +18,10 @@ select.addEventListener("change", () => {
   document.body.classList.forEach((className) =>
     document.body.classList.remove(className)
   );
+  changeTheme();
+});
 
+function changeTheme() {
   if (select.value === "Crisp Dramatic") {
     document.body.classList.add("theme-crisp-dramatic");
   } else if (select.value === "Mint Chocolate") {
@@ -30,61 +33,69 @@ select.addEventListener("change", () => {
   } else if (select.value === "Theme") {
     document.body.classList.add("theme-standard");
   }
-});
+  //set or save to local storage
+  window.localStorage.setItem("Current_Theme", select.value);
+};
 
 //add items
-
-function addlist() {
+(function addlist() {
   addBtn.addEventListener("click", (e) => {
-    const list = document.createElement("li");
-    const cbItem = document.createElement("input");
-    cbItem.classList.add("cb-bought");
-    cbItem.setAttribute("type", "checkbox");
-    const itemList = document.createElement("input");
-    itemList.classList.add("item-list");
-    itemList.setAttribute("type", "text");
-    list.appendChild(cbItem);
-    list.appendChild(itemList);
-    ulList.appendChild(list);
-
-    itemList.addEventListener("change", () => {
-      itemList.value = itemList.value.toLowerCase();
-    });
-
+    createListItem();
     e.preventDefault();
   });
-}
-
-addlist();
+})();
 
 clearItems.addEventListener("click", (e) => {
-  cbItem.classList.remove("cb-bought");
-  itemList.classList.remove("item-list");
+  const listItems = document.querySelectorAll("li");
+  listItems.forEach((listItem) => {
+    ulList.removeChild(listItem);
+  });
   e.preventDefault();
 });
 
-//set to local storage
+function createListItem(itemInputValue) {
+  const list = document.createElement("li");
+  const cbItem = document.createElement("input");
+  cbItem.classList.add("cb-bought");
+  cbItem.setAttribute("type", "checkbox");
+  const itemList = document.createElement("input");
+  itemList.classList.add("item-list");
+  itemList.setAttribute("type", "text");
+  itemList.value = itemInputValue ?? ""; //if first is undefined then ''.
+  list.appendChild(cbItem);
+  list.appendChild(itemList);
+  ulList.appendChild(list);
+
+  itemList.addEventListener("change", () => {
+    itemList.value = itemList.value.toLowerCase();
+  });
+}
+
+//set or save to local storage
 function saveToLocalStorage(itemList) {
-  localStorage.setItem('List_of_Items', JSON.stringify(itemList))
+  localStorage.setItem("List_of_Items", JSON.stringify(itemList));
   // localStorage.getItem('List_of_Items');
 }
 
+// get or load from local storage
+// (function getItems() {
+const retrieveItems = JSON.parse(localStorage.getItem("List_of_Items"));
+retrieveItems.forEach((itemInputValue) => {
+  createListItem(itemInputValue);
+  changeTheme();
+});
+// })();
+
 masterlist.addEventListener("click", () => {
-  const itemInputFields = document.querySelectorAll('.item-list');
-  const itemValues= [];
-  itemInputFields.forEach(inputField => {
+  const itemInputFields = document.querySelectorAll(".item-list");
+  const itemValues = [];
+  itemInputFields.forEach((inputField) => {
     itemValues.push(inputField.value);
   });
   saveToLocalStorage(itemValues);
 });
 
-function loadEventListeners(){
-  document.addEventListener('DOMContentLoaded', getItems);
-}
-
-// get from local storage
-function getItems(){
-  const retrieveItems = JSON.parse(localStorage.getItem(itemValues));
-  document.querySelector('.item-list').value = retrieveItems;
-  console.log('retrieve items:', retrieveItems);
-}
+//load - get item - theme from local storage
+const theme = window.localStorage.getItem("Current_Theme") ?? "Theme";
+select.value = theme;
+changeTheme();
