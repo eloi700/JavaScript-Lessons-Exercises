@@ -3,15 +3,7 @@ const select = document.getElementById("select");
 const addBtn = document.querySelector(".add-btn");
 const ulList = document.getElementById("ul-items");
 const clearItems = document.querySelector(".clear-items");
-
-const container = document.querySelector(".container");
 const masterlist = document.querySelector(".masterlist");
-
-const crispDramatic = document.querySelector(".crispy-dramatic");
-const mintChoco = document.querySelector(".mint-choco");
-const surfTurf = document.querySelector(".surf-turf");
-const blackWhite = document.querySelector(".black-white");
-const themeStandard = document.querySelector(".theme-standard");
 
 //change themes
 select.addEventListener("change", () => {
@@ -47,10 +39,11 @@ function changeTheme() {
 })();
 
 clearItems.addEventListener("click", (e) => {
-  const listItems = document.querySelectorAll("li");
-  listItems.forEach((listItem) => {
-    ulList.removeChild(listItem);
-  });
+  // const listItems = document.querySelectorAll("li");
+  // listItems.forEach((listItem) => {
+  //   ulList.removeChild(listItem);
+  // });
+  ulList.innerHTML = "";
   e.preventDefault();
 });
 
@@ -80,7 +73,7 @@ function saveToLocalStorage(itemList) {
 
 // get or load from local storage
 // (function getItems() {
-const retrieveItems = JSON.parse(localStorage.getItem("List_of_Items"));
+const retrieveItems = JSON.parse(localStorage.getItem("List_of_Items")) ?? [];
 retrieveItems.forEach((itemInputValue) => {
   createListItem(itemInputValue);
 });
@@ -97,6 +90,5 @@ masterlist.addEventListener("click", () => {
 
 //load - get item - theme from local storage
 const theme = window.localStorage.getItem("Current_Theme") ?? "Theme";
-console.log('saved theme', theme);
 select.value = theme;
 changeTheme();

@@ -1,8 +1,8 @@
-const CACHE_NAME = "shopping-list-1";
+const CACHE_NAME = "shopping-list-2";
 const ALL_CACHES = [CACHE_NAME];
 const files = [
   "index.php",
-  "exer30.css",
+  "index.css",
   "icon.svg",
   "icon192.png",
   "icon512.png",
