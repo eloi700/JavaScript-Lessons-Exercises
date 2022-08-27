@@ -6,31 +6,25 @@ document.getElementById("button3").addEventListener("click", getExternal);
 //fetch returns Promises(.then)
 function getText() {
   fetch("test.txt")
-    .then((res) => {
-      // catch the promise
-      return res.text(); // res.json()
-    })
-    //in data is that what promise returns
-    .then((data) => {
-      // grab the data
-      console.log(data);
-      document.getElementById("output").innerHTML = data;
-    })
+  .then(res => res.text())
+  // catch the promise
+  //in data is that what promise returns
+  .then((data) => {
+    console.log(data);
+    // grab the data
+    document.getElementById("output").innerHTML = data;
+  })
     //if there's error
-    .catch((err) => {
-      console.log(err);
-    });
+    .catch((err) => console.log(err));
 }
 
 //---------GET LOCAL JSON DATA
 function getJson() {
   fetch("posts.json")
-    .then((res) => {
+    .then(res => res.json())
       // catch the promise
-      return res.json();
-    })
     //in data is that what promise returns
-    .then((data) => {
+    .then(data => {
       // grab the data
       console.log(data);
       let output = "";
@@ -40,10 +34,8 @@ function getJson() {
       document.getElementById("output").innerHTML = output;
     })
     //if there's error
-    .catch((err) => {
-      console.log(err);
-    });
-}
+    .catch(err => console.log(err));
+  }
 
 //---------GET FROM EXTERNAL API
 function getExternal() {
