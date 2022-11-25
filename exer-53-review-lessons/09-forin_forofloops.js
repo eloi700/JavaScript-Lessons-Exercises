@@ -29,7 +29,7 @@ for (const prop in obj) {
 
 
 // FOR ... OF LOOP
-// Statement executes a loop that operates on a sequence of values sourced from an iterable object.
+// Statement executes a loop that operates on a sequence of VALUES sourced from an iterable object.
 
 // ITERATING OVER AN ARRAY
 const iterable1 = [10, 20, 30];
@@ -109,7 +109,7 @@ foo(1, 2, 3);
 
 // Both for...in and for...of statements iterate over something. The main difference between them is in what they iterate over.
 
-// The for...in statement iterates over the enumerable string properties of an object, while the for...of statement iterates over values that the iterable object defines to be iterated over.
+// The for...in statement iterates over the ENUMERABLE STRING properties of an object, while the for...of statement iterates over values that the iterable object defines to be iterated over.
 
 Object.prototype.objCustom = function () {};
 Array.prototype.arrCustom = function () {};
