@@ -1,3 +1,7 @@
+// Functional programming is all about building functions for immutable variables. No side-effects meaning its a pure functions.
+
+// Object-oriented programming is about having a relatively fixed set of functions, and you’re primarily modifying or adding new variables.
+
 // IMPERATIVE APPROACH
 const numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 let result1 = 0;
