@@ -47,3 +47,4 @@ const {
 
 console.log(englishTitle); // "Scratchpad"
 console.log(localeTitle);  // "JavaScript-Umgebung"
+
